@@ -1,0 +1,79 @@
+.advantages {
+	position: relative;
+	top: -210px;
+
+	display: flex;
+
+	width: 100%;
+	//max-width: 1400px;
+	height: 909px;
+	margin: auto;
+	margin-bottom: -210px;
+
+	background-image: url(../images/general/advantages.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+
+	align-items: flex-start;
+	justify-content: center;
+	@media screen and (max-width: 480px) {
+		height: auto;
+		display: block;
+		background: url(../images/general/advantages-mobile.png);
+		top: 0;
+		padding-top: 40px;
+		margin-bottom: 0;
+		padding-bottom: 40px;
+	}
+	&__item {
+		position: relative;
+
+		width: 234px;
+		margin-top: 290px;
+		margin-right: 33px;
+		margin-left: 33px;
+		padding-top: 250px;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		color: #fff;
+
+		font-family: "Unisans Bold";
+		font-size: em(20px);
+		@media screen and (max-width: 480px) {
+			padding-top: 250px;
+			margin: 60px auto 0;
+		}
+		&:before {
+			top: 0;
+
+			@include content;
+		}
+		span {
+			display: block;
+
+			margin-top: 10px;
+
+			text-transform: uppercase;
+
+			font-family: "Unisans Thin";
+		}
+		&--tractor {
+			&:before {
+				@include bg($tractor);
+			}
+		}
+		&--evacuator {
+			&:before {
+				@include bg($evacuator);
+			}
+		}
+		&--truck {
+			&:before {
+				@include bg($truck);
+			}
+		}
+	}
+}

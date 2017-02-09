@@ -1,0 +1,113 @@
+.services-content {
+	margin-top: 70px;
+	&__title {
+		width: 665px;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		padding-left: 40px;
+		@media screen and (max-width: 480px) {
+			width: 100%;
+		}
+	}
+}
+
+.numbered-item {
+	width: 92%;
+	margin: auto;
+	position: relative;
+
+	overflow: hidden;
+	&__prev {
+		position: absolute;
+		z-index: 1;
+		left: 0;
+
+		display: inline-block;
+
+		width: 86px;
+		height: 100%;
+		min-height: 115px;
+
+		text-align: center;
+		vertical-align: top;
+		vertical-align: middle;
+
+		color: #fff;
+		border-right: 1px dashed #fff;
+		background: $purple;
+
+		font-family: "Unisans Bold";
+		font-size: em(40px);
+		line-height: 115px;
+	}
+	&__content {
+		display: inline-block;
+
+		width: 90%;
+		min-height: 115px;
+		padding-right: 5%;
+		padding-left: 136px;
+
+		vertical-align: top;
+		text-transform: uppercase;
+
+		color: #5d5d5d;
+		background: $yellow;
+
+		font-family: "Unisans Thin";
+		font-size: em(25px);
+		p {
+			width: 85%;
+			padding-top: 18px;
+			padding-bottom: 18px;
+		}
+		&--second {
+			p {
+				padding-top: 42px;
+			}
+		}
+		&--third {
+			p {
+				padding-top: 30px;
+			}
+		}
+	}
+}
+
+.dotted-item {
+	padding-top: 22px;
+	padding-bottom: 40px;
+	padding-left: 95px;
+	@media screen and (max-width: 480px) {
+		width: 100%;
+		padding-left: 0;
+	}
+	&__element {
+		position: relative;
+
+		display: inline-block;
+
+		width: 330px;
+		padding-left: 62px;
+
+		vertical-align: top;
+
+		@extend .paragraph;
+		@media screen and (max-width: 480px) {
+			width: 100%;
+			display: block;
+		}
+		&--center {
+			width: 260px;
+			@media screen and (max-width: 480px) {
+				width: 100%;
+			}
+		}
+		&:before {
+			left: 0;
+
+			@include bg($dotted-item);
+			@include content;
+		}
+	}
+}

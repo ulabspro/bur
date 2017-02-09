@@ -1,0 +1,20 @@
+mixin address(item)
+	- if (item == undefined) item = ''
+	- else item1 = 'address-list-item--' + item, item2 = 'address-list--' + item
+	section.address
+		.wrapper
+			- if (item == '') {
+				.title.address__title Адреса объектов
+				a(href="/projects.html" title="View All").btn.btn--purple.address__btn View all
+			- }
+
+			.address-list(class="#{item2}")
+				- for (var i = 1; i < 7; ++i) {
+				.address-list-item(class="#{item1}")
+					.address-list-item__prev
+					.address-list-item__post
+						p г. Москва, Москва-река
+						p 1+1ШТ. 2Д+2Д-160
+						p L=546, 8+549,0M
+				- }
+

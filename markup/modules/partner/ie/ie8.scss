@@ -1,0 +1,9 @@
+.ie8 {
+	.partner {
+		&__title {
+			&:before {
+				font-size: em(195px);
+			}
+		}
+	}
+}

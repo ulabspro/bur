@@ -1,0 +1,16 @@
+.ie8 {
+	.clients {
+		display: inline-block;
+		&__title {
+			width: 160px;
+		}
+	}
+	.clients-list {
+		position: absolute;
+		top: 80px;
+		right: 0;
+
+		width: 850px;
+		height: 350px;
+	}
+}

@@ -1,0 +1,10 @@
+.ie8 {
+	.header-menu {
+		&__container {
+			display: block;
+		}
+		&__item {
+			display: inline-block;
+		}
+	}
+}

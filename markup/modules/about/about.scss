@@ -1,0 +1,45 @@
+.about {
+	width: 736px;
+	padding-top: 120px;
+	padding-left: 50px;
+	@media screen and (max-width: 480px) {
+		width: 100%;
+		padding-left: 15px;
+		box-sizing: border-box;
+		padding-top: 15px;
+		padding-right: 15px;
+	}
+	&__title {
+		margin-bottom: 125px;
+		@media screen and (max-width: 480px) {
+			margin-bottom: 25px;
+		}
+	}
+	&__text {
+		display: inline-block;
+
+		vertical-align: bottom;
+		@media screen and (max-width: 480px) {
+			display: block;
+		}
+		p {
+			margin-bottom: 15px;
+
+			@extend .paragraph;
+			@include blocks-justify;
+		}
+		&--left {
+			width: 490px;
+			margin-right: 50px;
+			@media screen and (max-width: 480px) {
+				width: 100%;
+			}
+		}
+		&--right {
+			width: 190px;
+			@media screen and (max-width: 480px) {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+// Common styles of the project
+
+html,
+body {
+	height: 100%;
+
+	font-size: $base-font-size;
+}
+
+.wrapper {
+	position: relative;
+
+	width: 100%;
+	max-width: 1400px;
+	margin: auto;
+
+	&--nowidth {
+		max-width: 1800px;
+	}
+}
+
+* html .wrapper {
+	height: 100%;
+}

@@ -1,0 +1,9 @@
+mixin slider()
+	section.slider
+		- for (var i = 1; i < 3; ++i) {
+		.slider__item
+			.slider__description
+				p KITCHEN REMODELING DONE RIGHT THE FIRST TIME!
+				a(href="#" title="").btn.btn--purple.slider__btn View Portfolio
+			img(src="%=staticPrefix=%images/content/slider1.jpg" alt="")
+		- }

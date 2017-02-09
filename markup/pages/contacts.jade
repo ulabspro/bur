@@ -1,0 +1,35 @@
+doctype html
+|<!--[if IE 7]><html class="ie7 lt-ie10 lt-ie9 lt-ie8 no-js" lang="ru"><![endif]-->
+|<!--[if IE 8]><html class="ie8 lt-ie10 lt-ie9 no-js" lang="ru"><![endif]-->
+|<!--[if IE 9 ]><html class="ie9 lt-ie10 no-js" lang="ru"><![endif]-->
+|<!--[if (gt IE 9)|!(IE)]><!--><html class="no-js" lang="ru"><!--<![endif]-->
+
+include ../modules/head/head
+include ../modules/footer/footer
+include ../modules/header/header
+include ../modules/slider/slider
+include ../modules/partner/partner
+include ../modules/advantages/advantages
+include ../modules/address/address
+include ../modules/about/about
+include ../modules/clients/clients
+include ../modules/contacts/contacts
+include ../modules/cost-calculation/cost-calculation
+
+//- inner-header
+include ../modules/inner-header/inner-header
+
+//- equipment
+include ../modules/equipment-content/equipment-content
+
+head
+	+head(head.defaults)
+body.page
+
+	+header(header.menu)
+
+	+inner-header('contacts', [])
+
+	+contacts()
+
+	+footer()

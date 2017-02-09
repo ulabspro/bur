@@ -1,0 +1,30 @@
+mixin price-content()
+	section.price-content
+		.price-content-form
+			form.form
+				input(type="text" value="" placeholder="Организация").form__element.form__element--half
+				input(type="text" value="" placeholder="Контактное лицо").form__element.form__element--half
+				input(type="text" value="" placeholder="Телефон").form__element.form__element--half
+				input(type="text" value="" placeholder="Адрес эл. почты").form__element.form__element--half
+
+				.form__radio-group
+					.form__radio.radio.active Москва
+					.form__radio.radio Московская область
+					.form__radio.radio Регион
+					input(type="hidden" name="radio")
+
+				.form__select
+					label.form__label Диаметр трубы (мм)
+
+					.select
+						span выбрать из списка
+						ul.select__drop
+							li.select__item 120 мм
+							li.select__item 240 мм
+						input(type="hidden" name="select" id="select")
+
+				input(type="text" value="" placeholder="Длина (в метрах)").form__element.form__element--full
+
+				textarea(placeholder="Примечания").form__element.form__element--full.form__element--textarea
+
+				input(type="submit" value="Отправить").btn.btn--yellow.form__submit

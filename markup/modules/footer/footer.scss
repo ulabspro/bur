@@ -1,0 +1,14 @@
+.footer {
+	padding-top: 60px;
+	padding-bottom: 20px;
+
+	background: $purple-dark;
+	p {
+		text-align: center;
+
+		color: $yellow;
+
+		font-family: "Unisans Thin";
+		font-size: em(14px);
+	}
+}

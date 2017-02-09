@@ -1,0 +1,10 @@
+mixin header(data)
+	header.header#header
+		.wrapper
+			nav.header-menu
+				.header-menu__mobile#mobile-menu
+				ul.header-menu__container#menu-container
+					- each val, link in data
+						li.header-menu__item
+							a(href="/#{link}.html" title="#{val}") #{val}
+			a(href="/index.html" title="Первая Буровая Компания").logo#logo

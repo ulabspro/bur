@@ -1,0 +1,19 @@
+mixin inner-header(header, text)
+	.wrapper
+		- if (header != 'contacts' && text) {
+		section.inner-header
+			h1.title.title--inner-header #{header}
+			.inner-header__text
+				- each val in text
+					p= val
+		- }
+		- if (header == 'contacts') {
+		section.inner-header--map
+			| <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=xVxxD2tTvNt9VjCHjGqyclhXLjpSqJv0&width=600&height=450"></script>
+		+cost-calculation('inner-header', 'Свяжитесь с нами')
+		- } else {
+		+cost-calculation('inner-header', 'Расчет стоимости')
+		- }
+
+
+

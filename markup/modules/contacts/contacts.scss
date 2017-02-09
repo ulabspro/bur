@@ -1,0 +1,51 @@
+.contacts {
+	padding-top: 100px;
+	padding-bottom: 125px;
+	padding-left: 50px;
+
+	background: $purple;
+	@media screen and (max-width: 480px) {
+		padding-left: 15px;
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+	&__item {
+		display: inline-block;
+
+		width: 260px;
+
+		vertical-align: top;
+		@media screen and (max-width: 480px) {
+			width: 100%;
+			display: block;
+			margin-bottom: 60px;
+		}
+		&:first-child {
+			margin-right: 80px;
+			@media screen and (max-width: 480px) {
+				margin-right: 0;
+			}
+		}
+		span {
+			display: block;
+
+			margin-bottom: 30px;
+
+			text-transform: uppercase;
+
+			color: #fff;
+
+			font-family: "Unisans Bold";
+			font-size: em(14px);
+		}
+		p,
+		a {
+			text-decoration: none;
+
+			color: $gray;
+
+			font-family: "Unisans Thin";
+			font-size: em(14px);
+		}
+	}
+}

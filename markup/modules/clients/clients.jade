@@ -1,0 +1,10 @@
+mixin clients()
+	section.clients
+		.wrapper
+			.clients__title
+				span Наши клиенты
+			.clients-list
+				- for (var i = 1; i < 8; ++i) {
+					.clients-list__item
+						img(src="%=staticPrefix=%images/content/client#{i}.png" alt="")
+				- }

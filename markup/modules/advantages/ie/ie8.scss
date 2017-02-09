@@ -1,0 +1,10 @@
+.ie8 {
+	.advantages {
+		text-align: center;
+
+		&__item {
+			display: inline-block;
+			vertical-align: top;
+		}
+	}
+}

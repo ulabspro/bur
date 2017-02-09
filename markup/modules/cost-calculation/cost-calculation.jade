@@ -1,0 +1,13 @@
+mixin cost-calculation(modiffer, page)
+	- if(page == undefined) page = ''
+	- if(modiffer == undefined) modiffer = ''
+	- else modiffer = 'cost-calculation--' + modiffer
+
+	section.cost-calculation(class="#{modiffer}")
+		.cost-calculation__title #{page}
+		.cost-calculation__entry Новые знакомства - это не только полезно, но и приятно! Мы высоко ценим Ваше время, поэтому предлагаем заполнить заявку на просчет прямо сейчас! Наши специалисты ответят на заявку в течении 1 дня.
+		.cost-calculation__address 140070, Московская область, Люберецкий р-н, пос. Томилино, ул Гаршина , д.11
+		.cost-calculation__contact
+			p  +7 (495) 223-23-88
+			p info@gnbstroy.ru
+		a(href="/price.html" title="Заполнить заявку").btn.btn--gray.cost-calculation__btn Заполнить заявку

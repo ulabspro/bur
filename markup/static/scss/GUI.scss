@@ -1,0 +1,260 @@
+.btn {
+	display: block;
+
+	width: 180px;
+	height: 55px;
+
+	text-align: center;
+	text-decoration: none;
+
+	font-family: "Unisans Thin";
+	font-size: em(14px);
+	line-height: 55px;
+
+	@include transition;
+	&--purple {
+		color: #fff;
+		background: $purple;
+	}
+	&--gray {
+		color: $purple;
+		background: $gray;
+	}
+	&--yellow {
+		color: $purple;
+		background: $yellow;
+	}
+	&:hover {
+		color: $purple;
+		background: $yellow;
+	}
+}
+
+.title {
+	text-transform: uppercase;
+
+	color: $purple;
+
+	font-family: "Unisans Bold";
+	font-size: em(40px);
+	&--inner-header {
+		position: relative;
+		z-index: 1;
+		&:before {
+			position: absolute;
+			z-index: -1;
+			top: -35px;
+			left: -15px;
+
+			content: ">>";
+
+			color: $yellow;
+
+			font-size: em(150px);
+			line-height: 0;
+		}
+	}
+	@media screen and (max-width: 480px) {
+		font-size: em(32px);
+	}
+}
+
+.paragraph {
+	color: #767676;
+
+	font-family: "Unisans Thin";
+	font-size: em(14px);
+	line-height: em(21px, 14px);
+}
+
+//- table
+table {
+	width: 90%;
+	margin: 0 auto 55px;
+
+	border-collapse: collapse;
+
+	font-family: "Unisans Thin";
+	thead {
+		tr {
+			th {
+				width: 30%;
+				height: 56px;
+				padding-left: 50px;
+
+				text-align: left;
+				text-transform: uppercase;
+
+				color: #fff;
+				border-left: 1px solid #adadad;
+				background: #b3b3b3;
+
+				font-size: em(25px);
+				font-weight: 300;
+				line-height: em(56px, 25px);
+				&:first-child {
+					border-left: none;
+				}
+			}
+		}
+	}
+	tfoot {
+		tr {
+			td {
+				padding-top: 43px;
+				padding-left: 50px;
+
+				color: $purple;
+				background: #fff;
+
+				@extend .paragraph;
+			}
+		}
+	}
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background: #f2f2f2;
+			}
+			&:nth-child(odd) {
+				background: #e6e6e6;
+			}
+			td {
+				padding-top: 21px;
+				padding-bottom: 14px;
+				padding-left: 50px;
+
+				color: $purple;
+				border-left: 1px solid #d4d4d4;
+
+				@extend .paragraph;
+				&:first-child {
+					border-left: none;
+				}
+			}
+		}
+	}
+}
+
+// form elements
+
+.form {
+	&__element {
+		background: #f5f5f5;
+		border: 1px solid #d2d2d5;
+		font-family: 'Unisans Thin';
+		font-size: em(14px);
+		color: $purple;
+		height: 50px;
+
+		&:focus {
+			outline-color: $yellow;
+			background: #fff;
+		}
+
+		&--half {
+			display: inline-block;
+			width: 225px;
+			padding-left: 10px;
+			margin-left: 5px;
+			margin-right: 5px;
+			margin-bottom: 15px;
+		}
+
+		&--full {
+			display: block;
+			width: 96%;
+			padding-left: 10px;
+			margin-left: 3px;
+		}
+
+		&--textarea {
+			height: 120px;
+			margin-top: 25px;
+			padding-top: 10px;
+		}
+	}
+
+	&__radio-group {
+		width: 100%;
+		margin-bottom: 25px;
+	}
+
+	&__radio {
+		display: inline-block;
+		padding-left: 30px;
+		position: relative;
+		font-size: em(14px);
+		color: $purple;
+		margin-left: 10px;
+		margin-right: 15px;
+		&:hover {
+			cursor: default;
+		}
+		&:before {
+			@include content;
+			@include bg($radio);
+			left: 0;
+			top: -1px;
+		}
+		&.active {
+			&:before {
+				@include content;
+				@include bg($dotted-item);
+				left: 0;
+				top: -1px;
+			}
+		}
+	}
+
+	&__label {
+		display: block;
+		font-family: 'Unisans Book';
+		font-size: em(14px);
+		color: $purple;
+		margin-bottom: 25px;
+		padding-left: 3px;
+	}
+
+	.select {
+		width: 96%;
+		background: #f5f5f5;
+		border: 1px solid #d5d5d8;
+		height: 50px;
+		margin-left: 3px;
+		line-height: 50px;
+		padding-left: 10px;
+		position: relative;
+		margin-bottom: 25px;
+		font-family: 'Unisans Thin';
+		font-size: em(14px);
+		color: $purple;
+		&:after {
+			@include content;
+			@include bg($select);
+			right: 0;
+			top: 0;
+		}
+		&__drop {
+			display: none;
+			@include nl;
+		}
+		&__item {
+			width: 100%;
+			background: #fff;
+			padding-left: 10px;
+			margin-left: -11px;
+			margin-bottom: -1px;
+			border: 1px solid #d5d5d8;
+			&:hover {
+				background: #f5f5f5;
+			}
+		}
+	}
+
+	&__submit {
+		border: 0;
+		margin-top: 25px;
+		margin-left: 3px;
+	}
+}
